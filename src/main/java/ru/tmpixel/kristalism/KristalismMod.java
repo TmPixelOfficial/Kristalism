@@ -8,6 +8,6 @@ public class KristalismMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        System.out.println("Kristalism loaded!");
+        ModItems.registerModItems();
     }
 }
