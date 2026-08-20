@@ -29,3 +29,9 @@ jobs:
 
       - name: Build with Gradle
         run: gradle build
+
+      - name: Upload mod JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: Kristalism-mod
+          path: build/libs/*.jar
