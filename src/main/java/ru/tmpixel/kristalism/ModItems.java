@@ -1,26 +1,44 @@
 package ru.tmpixel.kristalism;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
+import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.SwordItem;
+import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.ToolMaterials;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
 
+    public static final ToolMaterial KRISTALISM_MATERIAL = new ToolMaterial(
+            ToolMaterials.DIAMOND.getInverseTag(),
+            2031,
+            30.0F,
+            5.0F,
+            25,
+            ToolMaterials.DIAMOND.getRepairIngredient()
+    );
+
     public static final Item KRISTALISM = register(
             "kristalism",
-            new Item(new FabricItemSettings())
+            new Item(new Item.Settings())
     );
 
     public static final Item KRISTALISM_SWORD = register(
             "kristalism_sword",
-            new Item(new FabricItemSettings())
+            new SwordItem(
+                    KRISTALISM_MATERIAL,
+                    new Item.Settings()
+            )
     );
 
     public static final Item KRISTALISM_PICKAXE = register(
             "kristalism_pickaxe",
-            new Item(new FabricItemSettings())
+            new PickaxeItem(
+                    KRISTALISM_MATERIAL,
+                    new Item.Settings()
+            )
     );
 
     private static Item register(String name, Item item) {
@@ -32,6 +50,6 @@ public class ModItems {
     }
 
     public static void registerModItems() {
-        System.out.println("Registering Kristalism items...");
+        System.out.println("Registering Kristalism items!");
     }
 }
