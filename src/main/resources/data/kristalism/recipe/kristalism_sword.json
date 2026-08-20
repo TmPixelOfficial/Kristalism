@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " K ",
+    " K ",
+    " S "
+  ],
+  "key": {
+    "K": {
+      "item": "kristalism:kristalism"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "kristalism:kristalism_sword",
+    "count": 1
+  }
+}
